@@ -1,6 +1,11 @@
 import { useEffect } from "react";
-import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 import axios from "axios";
+
+import "./App.css";
 
 function App() {
   useEffect(() => {
@@ -16,9 +21,15 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route exact path="/search" component={Search}></Route>
+          <Route exact path="/saved" component={Saved}></Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
