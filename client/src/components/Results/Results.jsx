@@ -1,5 +1,5 @@
 import React from 'react';
-import DeleteBook from "../DeleteBook/DeleteBook"
+import SaveBook from "../DeleteBook/DeleteBook"
 
 const Results = () => {
     return (
@@ -9,7 +9,7 @@ const Results = () => {
             <div className="card w-100">
               <div className="card-body">
               <h5 className="card-title">Results</h5>
-                  <DeleteBook />
+                  <SaveBook />
               </div>
             </div>
           </div>

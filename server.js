@@ -41,10 +41,10 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-// HTML Get Route
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// // HTML Get Route
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // Server Listening
 app.listen(PORT, () => {

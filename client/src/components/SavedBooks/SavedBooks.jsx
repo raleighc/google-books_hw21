@@ -1,5 +1,5 @@
 import React from "react";
-import SaveBook from "../SaveBook/SaveBook"
+import DeleteBook from "../SaveBook/SaveBook"
 
 const SavedBooks = () => {
   return (
@@ -9,7 +9,7 @@ const SavedBooks = () => {
           <div className="card w-100">
             <div className="card-body">
             <h5 className="card-title">Saved Books</h5>
-                <SaveBook />
+                <DeleteBook />
             </div>
           </div>
         </div>

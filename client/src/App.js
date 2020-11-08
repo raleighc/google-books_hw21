@@ -25,6 +25,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
+          <Route exact path="/" component={Search}></Route>
           <Route exact path="/search" component={Search}></Route>
           <Route exact path="/saved" component={Saved}></Route>
         </Switch>
