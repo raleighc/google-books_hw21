@@ -9,11 +9,11 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    console.log("make an api call");
+    console.log("Test API call res below:")
     axios
       .get("/api/config")
       .then((res) => {
-        console.log(res);
+        console.log(res)
       })
       .catch((err) => {
         console.log(err);
