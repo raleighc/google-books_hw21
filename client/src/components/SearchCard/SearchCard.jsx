@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./SearchCard.css";
+
 const SearchCard = () => {
   return (
     <div className="container">
@@ -17,7 +19,7 @@ const SearchCard = () => {
                     id="formGroupExampleInput"
                     placeholder="Type which Book or Author you would like to search."
                   />
-                    <button class="btn btn-primary float-right" type="submit">Search</button>
+                    <button class="btn btn-outline-dark float-right" type="submit">Search</button>
                 </div>
               </form>
             </div>

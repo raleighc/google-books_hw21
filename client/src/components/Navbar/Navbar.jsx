@@ -1,14 +1,15 @@
+import {Link} from "react-router-dom"
 import React from "react";
 
 const Navbar = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/search">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link className="navbar-brand" to="/search">
           Google Books
-        </a>
+        </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -16,19 +17,19 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/search">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/search">
                 Search
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/saved">
+            <li className="nav-item">
+              <Link className="nav-link" to="/saved">
                 Saved
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
