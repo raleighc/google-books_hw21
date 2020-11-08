@@ -12,14 +12,14 @@ const SearchCard = () => {
               <h5 className="card-title">Book Search</h5>
               <form>
                 <div className="form-group">
-                  <label for="formGroupExampleInput">Book</label>
+                  <label htmlFor="formGroupExampleInput">Book</label>
                   <input
                     type="text"
                     className="form-control"
                     id="formGroupExampleInput"
                     placeholder="Type which Book or Author you would like to search."
                   />
-                    <button class="btn btn-outline-dark float-right" type="submit">Search</button>
+                    <button className="btn btn-outline-dark float-right" type="submit">Search</button>
                 </div>
               </form>
             </div>
