@@ -23,9 +23,9 @@ const SearchCard = () => {
     }
     API.getBook(query)
       .then((result) => {
-        console.log(result.data);
+        // console.log(result.data);
         setBooks(result.data.items);
-        console.log(books);
+        // console.log(books);
         setQuery("");
       })
       .catch((err) => {
@@ -43,7 +43,9 @@ const SearchCard = () => {
                 <h5 className="card-title">Book Search</h5>
                 <form onSubmit={handleOnSubmit}>
                   <div className="form-group">
-                    <label htmlFor="formGroupExampleInput">Search for Book Title:</label>
+                    <label htmlFor="formGroupExampleInput">
+                      Search for Book Title:
+                    </label>
                     <input
                       type="text"
                       className="form-control"
@@ -74,19 +76,20 @@ const SearchCard = () => {
               <div className="card-body">
                 <h5 className="card-title">Results</h5>
                 {books === undefined || books.length === 0
-              ? "There are no books by that title in our collection."
-              : books.map((book) => {
-                  return (
-                    <Results
-                    key={book}
-                      title={book.volumeInfo.title}
-                      authors={book.volumeInfo.authors}
-                      image={book.volumeInfo.imageLinks.smallThumbnail}
-                      description={book.volumeInfo.description}
-                      link={book.volumeInfo.infoLink}
-                    />
-                  );
-                })}
+                  ? "There are no books by that title in our collection."
+                  : books.map((book) => {
+                      // console.log(book);
+                      return (
+                        <Results
+                          key={book.id}
+                          title={book.volumeInfo.title}
+                          authors={book.volumeInfo.authors}
+                          image={book.volumeInfo.imageLinks.smallThumbnail}
+                          description={book.volumeInfo.description}
+                          link={book.volumeInfo.infoLink}
+                        />
+                      );
+                    })}
               </div>
             </div>
           </div>

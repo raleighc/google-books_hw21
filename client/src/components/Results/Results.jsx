@@ -1,20 +1,28 @@
 import React from "react";
+import Axios from "axios";
 
 import "./Results.css";
 
 const Results = (props) => {
-  // const [state, setState] = useState({
-  //   title: props.title,
-  //   authors: props.authors,
-  //   description: props.description,
-  //   image: props.image,
-  //   link: props.link,
-  // });
+  const bookObject = {
+    title: props.title,
+    authors: props.authors,
+    description: props.description,
+    image: props.image,
+    link: props.link,
+  }
 
+  const saveBookToDatabase = () => {
+    Axios.post("/api/books", bookObject).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err)
+    })
+  };
 
-const viewLink = (event) => {
-  window.open(props.link);
-}
+  const viewLink = () => {
+    window.open(props.link);
+  };
 
   return (
     <div className="card w-90">
@@ -25,8 +33,15 @@ const viewLink = (event) => {
             <h6>by: {props.authors}</h6>
           </div>
           <div className="col-sm-4 text-right">
-            <button onClick={viewLink} className="btn btn-outline-info">View</button>
-            <button className="btn btn-outline-info">Save</button>
+            <button onClick={viewLink} className="btn btn-outline-info">
+              View
+            </button>
+            <button
+              onClick={saveBookToDatabase}
+              className="btn btn-outline-info"
+            >
+              Save
+            </button>
           </div>
         </div>
         <div className="row">
