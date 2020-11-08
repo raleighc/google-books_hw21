@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from "../components/Header/Header";
+
 
 const Saved = () => {
     return (
-        <div>
-            <h1>This is the Saved Page.</h1>
-        </div>
+        <>
+            <Header />
+        </>
     );
 };
 

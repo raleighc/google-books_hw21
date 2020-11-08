@@ -1,10 +1,13 @@
 import React from 'react';
+import SearchCard from "../components/SearchCard/SearchCard";
+import Header from "../components/Header/Header";
 
 const Search = () => {
     return (
-        <div>
-            <h1>This is the Search Page.</h1>
-        </div>
+        <>
+        <Header />
+           <SearchCard />
+        </>
     );
 };
 
