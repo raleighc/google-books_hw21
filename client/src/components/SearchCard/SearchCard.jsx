@@ -25,7 +25,7 @@ const SearchCard = () => {
       .then((result) => {
         // console.log(result.data);
         setBooks(result.data.items);
-        // console.log(books);
+        console.log(result.data.items);
         setQuery("");
       })
       .catch((err) => {
@@ -84,7 +84,7 @@ const SearchCard = () => {
                           key={book.id}
                           title={book.volumeInfo.title}
                           authors={book.volumeInfo.authors}
-                          image={book.volumeInfo.imageLinks.smallThumbnail}
+                          image={book.volumeInfo.imageLinks.thumbnail}
                           description={book.volumeInfo.description}
                           link={book.volumeInfo.infoLink}
                         />

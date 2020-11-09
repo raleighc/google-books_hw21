@@ -12,7 +12,9 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("client/build"));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 // Mongoose Boilerplate Connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/google-books", {
@@ -41,10 +43,10 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-// // HTML Get Route
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+// HTML Get Route
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // Server Listening
 app.listen(PORT, () => {

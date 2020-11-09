@@ -45,7 +45,7 @@ const SavedBooks = () => {
                     <div className="row">
                       <div className="col-sm-8 text-left">
                         <h5>{book.title}</h5>
-                        <h6>{book.authors}</h6>
+                        <h6>by: {book.authors}</h6>
                       </div>
                       <div className="col-sm-4 text-right">
                         <button
